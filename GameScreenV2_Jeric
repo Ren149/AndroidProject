@@ -49,6 +49,8 @@ public class GameScreen extends AppCompatActivity {
         public void onClick(View v) {
             Intent i = new Intent();
             i.setClass(getBaseContext(), ShopScreen.class);
+            String money = cashMoney.getText().toString();
+            i.putExtra("cashMoney", money);
             startActivityForResult(i, 0);
 
         }
