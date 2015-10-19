@@ -61,6 +61,23 @@
                 android:layout_gravity="center"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash: $"
+                android:textSize="20dp"
+                android:textColor="#00FF00"
+                android:id="@+id/textCash"
+                android:paddingLeft="100dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5000"
+                android:textSize="20dp"
+                android:textColor="#00FF00"
+                android:id="@+id/textCost"/>
         </LinearLayout>
 		
         //QA
