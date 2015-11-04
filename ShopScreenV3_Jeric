@@ -23,6 +23,7 @@ public class ShopScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_screen);
+        cashMoney = (TextView) findViewById(R.id.textCost);
 
         String returnCash = getIntent().getExtras().getString("cashMoney");
         cashMoney.setText(returnCash);
@@ -48,7 +49,7 @@ public class ShopScreen extends AppCompatActivity {
             int currentCash = Integer.parseInt(returnCash);
             if(currentCash >= 100)
                 currentCash -= 100;
-            cashMoney.setText(currentCash);
+            cashMoney.setText(currentCash + "");
 
         }
     };
@@ -61,7 +62,7 @@ public class ShopScreen extends AppCompatActivity {
             int currentCash = Integer.parseInt(returnCash);
             if(currentCash >= 200)
                 currentCash -= 200;
-            cashMoney.setText(currentCash);
+            cashMoney.setText(currentCash + "");
         }
     };
 
@@ -73,7 +74,7 @@ public class ShopScreen extends AppCompatActivity {
             int currentCash = Integer.parseInt(returnCash);
             if(currentCash >= 300)
                 currentCash -= 300;
-            cashMoney.setText(currentCash);
+            cashMoney.setText(currentCash + "");
 
         }
     };
@@ -86,7 +87,7 @@ public class ShopScreen extends AppCompatActivity {
             int currentCash = Integer.parseInt(returnCash);
             if(currentCash >= 400)
                 currentCash -= 400;
-            cashMoney.setText(currentCash);
+            cashMoney.setText(currentCash + "");
         }
     };
 
@@ -94,7 +95,7 @@ public class ShopScreen extends AppCompatActivity {
     View.OnClickListener gotoGame = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String returnCash = cashMoney.getText().toString();
+            int returnCash = Integer.parseInt(cashMoney.getText().toString());
             Intent i = new Intent();
             i.setClass(getBaseContext(),GameScreen.class);
             i.putExtra("returnCash", returnCash);
